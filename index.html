@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css" />    
+    <link rel="stylesheet" href="globales.css" />
+    <script src="popup.js"></script>
+    <title>Vorterix</title>
+</head>
+<body>
+    <header class="barra"> 
+        <img src="img/vorterix-1.png" alt="logo" class="logo">
+    </header>
+<section class="portada">
+  <div class="titulo-portada"> 
+    <h1>¡Sumate al Bingo del Momo!</h1>
+  </div>
+  <div class="subtitulo">
+    <h2>
+      ¿Te reís todos los días con Momo? <br>
+      ¡Ahora podés ser parte del juego que hacemos en vivo! <br>
+      Anotate y participá.
+    </h2>
+  </div>
+  <div class="boton-container">
+    <a href="#formulario">
+      <button class="btn-jugar">¡QUIERO JUGAR!</button>
+    </a>
+  </div>
+  <div class="momo-wrapper">
+    <img src="img/momo-png.png" alt="Momo" class="momo-imagen">
+  </div>
+</section>
+
+<section class="seccion-1">
+  <h2 class="titulo-seccion">Participá en el gran gran bingo solo con tu mail.</h2>
+  <div class="contenido-seccion">
+    <div class="texto">
+      <p>Cada miércoles por la mañana en Dejá que entre el sol, jugamos al gran gran bingo del Momo. Ahora vos también podés sumarte: <span class="resaltado"> Completá el formulario</span> y recibí tu inscripción por mail.</p>
+    </div>
+    <div class="imagen">
+      <img src="img/bingo-momo.jpg" alt="Descripción de la imagen">
+    </div>
+  </div>
+</section>
+
+<section class="seccion-2">
+  <h2 class="titulo-seccion-blanco">Sumá puntos semana a semana y convertite en el campeón.</h2>
+  <div class="contenido-seccion2">
+   
+    <div class="imagen">
+      <img src="img/bingo-momo-2.jpeg" alt="Imagen de transmisión">
+    </div>
+     <div class="texto-blanco">
+      <p>Cada acierto en el bingo te acerca a premios mensuales y ser el ganador del bingo. ¿Estás listo para <span class="resaltado">convertirte en el gran campeón</span>  en Dejá que entre el sol?</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion-3">
+  <h2 class="titulo-seccion" id="titulo3">¡Demostrá cuánto conoces al Momo!</h2>
+  <div class="videos-container">
+    <div class="video">
+      <video controls>
+        <source src="img/video-momo.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    </div>
+    <div class="video tiktok">
+      <video controls>
+        <source src="img/tiktok-momo.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    </div>
+  </div>
+  <h3 class="subtitulo-seccion">¿Qué va a decir hoy el Momo? ¿Lugares comunes? ¿Segunda guerra mundial? <br>¿Te animás a adivinar cuál va a ser el próximo? 
+<span class="resaltado"> ¡Jugá y demostralo! </span></h3>
+</section>
+
+<section class="seccion-4" id="formulario">
+  <h2 class="titulo-seccion-formulario">Completá el formulario y participá por increíbles premios</h2>
+  <div class="formulario-wrapper">
+    <form class="formulario" id="formularioParticipacion">
+      <div class="campo">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+      </div>
+      <div class="campo">
+        <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+      </div>
+      <div class="campo">
+        <input type="number" id="edad" name="edad" placeholder="Edad" required>
+      </div>
+      <button type="submit">¡QUIERO JUGAR!</button>
+    </form>
+    <div class="imagen-formulario">
+      <img src="img/logo.png" alt="logo" />
+    </div>
+  </div>
+</section>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <h2>¡Gracias por participar, <span id="nombreIngresado"></span>!</h2>
+    <p>Recibirás las instrucciones detalladas en tu correo electrónico <span id="emailIngresado"></span>.</p>
+    <button id="btnAceptar">Aceptar</button>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-content">
+    <img src="img/vorterix-1.png" alt="Logo Vorterix" class="footer-logo">
+
+    <p class="footer-copyright">
+      &copy; 2025 Vorterix. Todos los derechos reservados.
+    </p>
+
+    <div class="footer-social">
+      <a href="https://www.youtube.com/@VorterixOficial" target="_blank" rel="noopener noreferrer" aria-label="Visita nuestro canal de YouTube">
+        <img src="img/youtube.png" alt="YouTube">
+      </a>
+      <a href="https://x.com/vorterix" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en X (Twitter)">
+        <img src="img/x.png" alt="X (Twitter)">
+      </a>
+      <a href="https://www.tiktok.com/@vorterixcom" target="_blank" rel="noopener noreferrer" aria-label="Encuéntranos en TikTok">
+        <img src="img/tiktok.png" alt="TikTok">
+      </a>
+      <a href="https://www.instagram.com/vorterixok" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram">
+        <img src="img/instagram.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

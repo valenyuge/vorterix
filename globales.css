@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Kaneda-Gothic';
+  src: url('fonts/Kaneda_Gothic_Regular.otf') format('opentype');
+  font-weight: normal; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kaneda-Gothic';
+  src: url('fonts/Kaneda_Gothic_Bold.otf') format('opentype');
+  font-weight: bold; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kaneda-Gothic';
+  src: url('fonts/Kaneda_Gothic_ExtraBold.otf') format('opentype');
+  font-weight: 800; /* ExtraBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kaneda-Gothic';
+  src: url('fonts/Kaneda_Gothic_ExtraLight.otf') format('opentype');
+  font-weight: 200; /* ExtraLight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kaneda-Gothic';
+  src: url('fonts/Kaneda_Gothic_Light.otf') format('opentype');
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kaneda-Gothic';
+  src: url('fonts/Kaneda_Gothic_Medium.otf') format('opentype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kaneda-Gothic';
+  src: url('fonts/Kaneda_Gothic_Black.otf') format('opentype');
+  font-weight: 900; /* Black */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ABeeZee';
+  src: url('fonts/ABeeZee-Regular.ttf') format('opentype');
+}

@@ -1,0 +1,779 @@
+/* ==================================== */
+/* ESTILOS GLOBALES Y FUENTES           */
+/* ==================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kaneda-Gothic', sans-serif; /* Añadido fallback */
+}
+
+p {
+  font-family: 'Kaneda-Gothic', sans-serif; /* Añadido fallback */
+  font-weight: 500; /* 'medium' no es estándar, 500 es su equivalente numérico */
+}
+
+.resaltado {
+  color: #E03191;
+}
+
+/* ==================================== */
+/* BARRA DE NAVEGACIÓN (HEADER)         */
+/* ==================================== */
+.barra {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrado por defecto (móvil) */
+  background-color: #000000;
+  padding: 0 0; /* SIN PADDING por defecto (móvil) */
+  left: auto;
+  transform: none;
+}
+
+.logo {
+  height: 40px;
+  margin: 16px;
+}
+
+/* ==================================== */
+/* PORTADA                              */
+/* ==================================== */
+.portada {
+  background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0) 50%, black 100%),
+    url(img/vorterix-fondo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.momo-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  width: 850px;
+  max-width: 40%;
+  height: auto;
+}
+
+.momo-imagen {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.momo-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.titulo-portada {
+  position: absolute;
+  top: 100px;
+  padding: 10px 20px;
+  text-align: left;
+  left: 850px;
+}
+
+.titulo-portada h1 {
+  font-size: 98px;
+  color: white;
+  font-family: 'Kaneda-Gothic';
+  font-weight: 800;
+  -webkit-text-stroke: 2px black;
+  margin: 0px;
+}
+
+.subtitulo {
+  position: absolute;
+  top: 250px;
+  left: 850px;
+  text-align: left;
+  font-family: 'Kaneda-Gothic';
+  font-weight: 600;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 0;
+  -webkit-text-stroke: black 1px;
+}
+
+.subtitulo h2 {
+  font-size: 44px !important; /* Mantenemos !important como estaba */
+  font-weight: 600;
+}
+
+.btn-jugar {
+  position: absolute;
+  top: 600px;
+  left: 870px;
+  background-color: #E03191;
+  color: white;
+  font-family: 'Kaneda-Gothic';
+  font-size: 58px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 700px;
+  font-weight: 700;
+  margin: 0px;
+  letter-spacing: 3px;
+}
+
+/* ==================================== */
+/* TÍTULOS DE SECCIÓN GENERALES         */
+/* ==================================== */
+.titulo-seccion {
+  /* Tomando la última definición: */
+  font-size: 70px;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 60px;
+  margin-bottom: 60px; /* Último valor */
+  max-width: 40%; /* Último valor */
+}
+
+.titulo-seccion-blanco {
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 70px;
+  margin-top: -50px;
+  max-width: 600px;
+}
+
+.titulo-seccion-formulario {
+  font-size: 70px;
+  text-align: center; /* <-- Por defecto (PC) es centrado */
+  font-weight: bold;
+  margin-bottom: 90px;
+  color: white;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+#titulo3 {
+  margin-top: -20px;
+}
+
+/* ==================================== */
+/* SECCIÓN 1                            */
+/* ==================================== */
+.seccion-1 {
+  background-color: white;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -70px;
+}
+
+/* .contenido-seccion para seccion-1 (y quizás otras) */
+.contenido-seccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  flex-direction: row;
+}
+
+.seccion-1 .texto { /* Especificidad para seccion-1 */
+  flex: 1;
+  padding-right: 200px;
+  max-width: 90%; /* Ojo: 90% es muy grande para dos columnas, considera 50% */
+  text-align: left;
+}
+
+.seccion-1 .texto p { /* Especificidad para seccion-1 */
+  font-size: 26px;
+  color: #333;
+  font-weight: 500;
+  font-family: 'ABeeZee', sans-serif; /* Añadido fallback */
+}
+
+/* Estilos de .imagen (usados en seccion-1 y seccion-2) */
+.imagen {
+  flex: 1;
+}
+
+.imagen img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block; /* Asegura que sea bloque */
+}
+
+/* ==================================== */
+/* SECCIÓN 2                            */
+/* ==================================== */
+.seccion-2 {
+  background-color: black;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Usando .contenido-seccion2 como lo pusiste */
+.contenido-seccion2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 175px; /* Añadido un gap razonable */
+}
+
+.seccion-2 .texto-blanco { /* Especificidad */
+  flex: 1;
+  padding-left: 20px;
+}
+
+.seccion-2 .texto-blanco p { /* Especificidad */
+  font-size: 26px;
+  color: white;
+  font-weight: 500;
+  font-family: 'ABeeZee', sans-serif; /* Añadido fallback */
+}
+
+/* .imagen y .imagen img ya están definidos arriba */
+
+
+/* ==================================== */
+/* SECCIÓN 3 (VIDEOS)                   */
+/* ==================================== */
+.seccion-3 {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px; /* Añadido padding para separar */
+}
+
+.videos-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 200px; /* Ojo: 200px es mucho gap */
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 500px;
+  height: 280px;
+}
+
+.video video {
+  width: 100%;
+  height: 100%;
+  /* max-width: 200%; <-- Esto es inusual, considera 100% */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.video.tiktok {
+  background-color: black;
+}
+
+.video.tiktok video {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.subtitulo-seccion {
+  font-size: 26px;
+  color: #333;
+  text-align: center;
+  margin-top: 80px;
+  font-weight: 500;
+  max-width: 1200px;
+  font-family: 'ABeeZee', sans-serif; /* Añadido fallback */
+  margin-bottom: 80px;
+}
+
+/* ==================================== */
+/* SECCIÓN 4 (FORMULARIO)               */
+/* ==================================== */
+.seccion-4 {
+  background-color: black;
+  padding: 50px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.formulario {
+  width: 42%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea los campos a la izquierda */
+  gap: 30px;
+  border-radius: 8px;
+  /* El padding y box-shadow se eliminaron en una de tus versiones, los mantengo fuera por ahora */
+  /* Si los necesitas, añade: */
+  /* padding: 20px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Hacemos que .campo ocupe el ancho */
+}
+
+.campo label {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 5px;
+  text-align: left; /* Asegura que la etiqueta esté a la izquierda */
+}
+
+.campo input {
+  padding: 10px;
+  font-size: 30px;
+  border: 1px solid #ddd;
+  font-family: 'ABeeZee', sans-serif; /* Añadido fallback */
+  width: 100%; /* <--- Hacemos que ocupe el 100% de .campo */
+  box-sizing: border-box; /* Importante con width 100% y padding */
+  min-width: auto; /* Quitamos min-width fijo */
+  /* align-self: flex-start; */ /* Ya no es necesario */
+}
+
+.imagen-formulario {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-formulario img {
+  width: 100%;
+  height: auto;
+}
+
+button { /* Estilo general para botones */
+  background-color: #E03191;
+  color: white;
+  font-family: 'Kaneda-Gothic';
+  font-size: 48px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+/* Estilo específico para el botón del formulario */
+.formulario button {
+  width: 80%;
+  align-self: center;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #d81b60;
+}
+
+/* ==================================== */
+/* POPUP                                */
+/* ==================================== */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup.show {
+  display: flex;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 80%;
+}
+
+.popup-content h2 {
+  font-size: 37px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.popup-content p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+  font-family: 'ABeeZee', sans-serif; /* Añadido fallback */
+}
+
+.popup-content button {
+  font-size: 28px;
+  padding: 10px 20px;
+  width: 40%;
+  font-weight: bold;
+}
+
+.popup-content button:hover {
+  background-color: #d81b60;
+}
+
+/* ==================================== */
+/* FOOTER                               */
+/* ==================================== */
+.footer {
+  background-color: #FFFFFF;
+  color: #333333;
+  padding: 20px 20px;
+  border-top: 1px solid #EAEAEA;
+  font-family: 'ABeeZee', sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.footer-logo {
+  height: 35px;
+  width: auto;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  color: #555555;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a {
+  margin: 0 12px;
+  display: inline-block;
+}
+
+.footer-social a img {
+  height: 24px;
+  width: auto;
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.footer-social a:hover img {
+  opacity: 1;
+}
+
+/* ==================================== */
+/* MEDIA QUERIES (MÓVIL - 768px o menos) */
+/* ==================================== */
+@media (max-width: 768px) {
+
+  /* --- Barra Móvil --- */
+ 
+
+  /* --- Portada Móvil --- */
+  .portada {
+    height: 110vh;
+     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, black 100%),
+    url(img/vorterix-fondo.png);
+  }
+  
+  .momo-wrapper {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130%;
+    max-width: 130%;
+    margin: 0;
+    z-index: 1;
+  }
+
+  .titulo-portada {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .titulo-portada h1 {
+    font-size: 100px; /* Último valor */
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  .subtitulo {
+    top: 79%;
+    text-align: left;
+    font-family: 'Kaneda-Gothic', sans-serif;
+    font-weight: normal;
+    padding: 20px;
+    max-width: 90%;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+
+  .subtitulo h2 {
+    font-size: 30px !important; /* Mantenemos !important */
+    font-weight: 600;
+  }
+
+  .btn-jugar {
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38px;
+    padding: 8px 30px;
+    font-weight: 700;
+    z-index: 2;
+    max-width: 90%;
+    width: 90%;
+  }
+
+  /* --- Sección 1 Móvil --- */
+  .seccion-1 {
+    padding: 0 15px 40px 15px; /* Padding: 0 arriba, 15px lados, 40px abajo (ajusta a tu gusto) */
+    box-sizing: border-box; /* Importante para que el padding funcione bien */
+    margin-top: -70px; /* Mantenemos tu margen negativo */
+    /* display: flex; flex-direction: column; align-items: center; <-- Se heredan */
+  }
+
+  .seccion-1 .titulo-seccion {
+    max-width: 95%; /* Sobreescribimos cualquier max-width anterior */
+    min-width: 95%; /* Sobreescribimos cualquier min-width anterior */
+    padding: 0; /* <-- Quitamos padding interno para que use el del padre */
+    margin-top: 110px; /* Mantenemos tu margen superior */
+    margin-bottom: 40px; /* Ajustamos el margen inferior si es necesario */
+    font-size: 50px; /* Mantenemos el tamaño */
+    text-align: center; /* Mantenemos centrado */
+  }
+
+  .seccion-1 .contenido-seccion {
+    width: 95%; /* <-- Aseguramos que ocupe el 100% */
+    flex-direction: column-reverse !important; /* Mantenemos */
+    align-items: center; /* Mantenemos */
+    text-align: center; /* Mantenemos */
+    gap: 20px; /* Ajustamos el gap para móvil si es necesario */
+  }
+
+  .seccion-1 .texto {
+    padding: 0; /* Quitamos padding derecho */
+    max-width: 100%; /* Hacemos que ocupe todo el ancho */
+  }
+
+  .seccion-1 .texto p {
+    font-size: 20px;
+  }
+
+  /* --- Sección 2 Móvil --- */
+  .titulo-seccion-blanco {
+    width: 95%;
+    font-size: 50px;
+  }
+
+  .contenido-seccion2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    gap: 20px;
+  }
+
+  .texto-blanco {
+    width: 100%;
+    text-align: left;
+  }
+
+  .seccion-2 .texto-blanco{
+    padding-left: 0px;
+  }
+
+  .seccion-2 .texto-blanco p{
+    font-size: 20px;
+  }
+
+  /* --- Sección 3 Móvil --- */
+  .videos-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .video {
+    max-width: 88%;
+    height: auto;
+  }
+
+  .video video {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .video.tiktok {
+    height: 265px;
+    width: 100%;
+  }
+
+  .video.tiktok video {
+    height: 265px;
+  }
+
+  .subtitulo-seccion {
+    font-size: 20px;
+    padding: 0 30px;
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .titulo-seccion {
+    max-width: 90%;
+    font-size: 50px;
+  }
+  
+  /* --- Sección 4 (Formulario) Móvil --- */
+  .imagen-formulario {
+    display: none;
+  }
+
+  .formulario-wrapper {
+    justify-content: center;
+  }
+
+  .formulario {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .campo input {
+    font-size: 15px;
+    /* width: 100% y box-sizing ya están en la base */
+  }
+
+  .formulario button {
+    width: 60%;
+    font-size: 35px;
+  }
+
+  .titulo-seccion-formulario {
+    text-align: left;
+    padding: 0 16px;
+    box-sizing: border-box;
+    font-size: 50px; /* Reducimos tamaño */
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+.popup{
+  position: fixed;
+  width: 87%;
+  justify-content: center
+}
+
+ .popup-content {
+    width: 90%; 
+    padding: 20px 0; 
+  }
+
+  .popup-content h2 {
+    font-size: 30px; 
+    margin-bottom: 20px; 
+  }
+
+  .popup-content p {
+    font-size: 14px;
+    margin-bottom: 20px; 
+  }
+
+  /* --- REGLA SÓLO PARA MÓVIL --- */
+  .popup-content button {
+    font-size: 18px; /* Reducimos tamaño */
+    width: 60%; /* Hacemos más ancho */
+    padding: 12px 15px; /* Ajustamos padding */
+  }
+}
+
+
+/* ==================================== */
+/* MEDIA QUERIES (PC - 768px o más)     */
+/* ==================================== */
+@media (min-width: 768px) {
+  .barra {
+    justify-content: flex-start;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 16px; /* Añadimos el padding para PC */
+  }
+}
